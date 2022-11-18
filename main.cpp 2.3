@@ -1,0 +1,71 @@
+#include
+using namespace std;
+
+int main()
+{
+int a;
+int b;
+int d;
+bool c;
+
+cout<<"Podaj miesiąc";
+cin>>a;
+if(a>12||a<1){cout<<"Nie ma takiego miesiaca"<<endl<<endl;return 0;}
+
+cout<<"Podaj rok: ";
+cin>>b;
+if(b<1){cout<<"Nie ma takiego roku "<<endl<<endl;return 0;}
+d=b%4;
+if(d==0) {c=true;}
+else{c=false;}
+switch(a)
+{
+case 1:
+    cout<<"Styczen ma 31dni"<<endl;
+    break;
+case 2:
+    cout<<"Luty";
+    if(c){cout<<"Mamy rok przestępny i luty ma 29 dni.";}
+    else{cout<< "Mamy rok nieprzestępny i luty ma 28 dni.";}
+    cout<<endl;
+    break;
+case 3:
+    cout<<"Marzec ma 31 dni." <<endl;
+    break;
+case 4:
+    cout<<"Kwiecien ma 30 dni."<<endl;;
+    break;
+case 5:
+    cout<<"Maj ma 31 dni."<<endl;
+    break;
+case 6:
+    cout<<"Czerwiec ma 30 dni."<<endl;;
+    break;
+case 7:
+    cout<<"Lipiec ma 31 dni."<<endl;
+    break;
+case 8:
+    cout<<"Sierpien ma 31 dni."<<endl;
+    break;
+case 9:
+    cout<<"Wrzesien ma 30 dni."<<endl;
+    break;
+case 10:
+    cout<<"Pazdziernik ma 31 dni."<<endl;
+    break;
+case 11:
+    cout <<"Listopad ma 30 dni."<<endl;
+    break;
+case 12:
+    cout<<"Grudzien ma 31 dni."<<endl;
+    break;
+}
+if (a<4||a>9){cout<<"Pochmurny miesiąc"<<endl;}
+else{cout<<"Miesiac jest sloneczny" << endl; }
+
+
+
+
+
+return 0;
+}
